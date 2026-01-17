@@ -2,7 +2,7 @@ use std::env;
 use std::path::Path;
 
 fn main() {
-    let config_dir_location = match env::var("DSWTH_CONFIG_PATH") {
+    let config_dir = match env::var("DSWTH_CONFIG_PATH") {
         Ok(val) => Path::new(&val).to_path_buf(),
         Err(_e) => {
             if let Some(config_dir) = dirs::config_dir() {
@@ -14,5 +14,5 @@ fn main() {
             }
         }
     };
-    println!("Starting DSWTH with configuration directory: {}", config_dir_location.display());
+    println!("Starting DSWTH with configuration directory: {}", config_dir.display());
 }
