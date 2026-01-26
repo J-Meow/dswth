@@ -1,0 +1,4 @@
+version: 1
+servers:
+    - id: demo-dswth-server
+      port: 9912

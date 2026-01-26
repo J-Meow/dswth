@@ -1,0 +1,8 @@
+name: Webhook to Command Test
+thing:
+    type: std.webhook
+    serverid: demo-dswth-server
+    pathname: /commandtest
+stuff:
+    - type: std.command
+      command: touch ~/dswthtesting.txt
